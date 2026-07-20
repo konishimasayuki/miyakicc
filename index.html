@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>みやきカントリークラブ | 佐賀県みやき町・筑後川沿いの河川敷コース</title>
+<meta name="description" content="佐賀県三養基郡みやき町、筑後川沿いにある18ホール・パー70のフラットな河川敷コース。みやきカントリークラブ公式サイト。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#12352a;
+  --pine-deep:#0c261e;
+  --green:#2d5a43;
+  --green-soft:#3f7256;
+  --brass:#b8942f;
+  --brass-light:#d8bd6a;
+  --cream:#f5f1e6;
+  --paper:#fffdf7;
+  --ink:#24271f;
+  --muted:#6f7365;
+  --line:#e2dcc9;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans JP",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;
+}
+h1,h2,h3,.mincho{font-family:"Shippori Mincho",serif}
+.num{font-family:"Cormorant Garamond",serif;font-weight:600;letter-spacing:.02em;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1120px,90vw);margin:0 auto}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(18,53,42,.0);
+  transition:background .4s ease, box-shadow .4s ease;
+}
+header.solid{background:rgba(12,38,30,.96);box-shadow:0 2px 24px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.7rem;color:#fff}
+.brand .mark{width:34px;height:34px;flex:none}
+.brand .name{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.12rem;letter-spacing:.08em;line-height:1.2}
+.brand .name small{display:block;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:.62rem;letter-spacing:.34em;color:var(--brass-light);text-transform:uppercase}
+.menu{display:flex;align-items:center;gap:1.5rem}
+.menu a{color:#eae7dc;font-size:.83rem;font-weight:500;letter-spacing:.04em;position:relative;padding:.2rem 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--brass-light);transition:width .3s}
+.menu a:hover{color:#fff}
+.menu a:hover::after{width:100%}
+.tel-btn{display:flex;align-items:center;gap:.5rem;border:1px solid rgba(216,189,106,.5);border-radius:2px;padding:.5rem .9rem;color:var(--brass-light)!important}
+.tel-btn .n{font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:#fff;letter-spacing:.03em}
+.reserve{background:var(--brass);color:#12352a!important;font-weight:700!important;padding:.6rem 1.2rem;border-radius:2px;font-size:.82rem;letter-spacing:.06em}
+.reserve::after{display:none}
+.reserve:hover{background:var(--brass-light)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;padding:6px}
+.burger span{width:26px;height:2px;background:#fff;display:block;transition:.3s}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:
+    radial-gradient(120% 90% at 70% 15%, rgba(63,114,86,.55) 0%, rgba(18,53,42,0) 55%),
+    linear-gradient(180deg,#0c1f19 0%,#12352a 45%,#1c4331 100%);
+  overflow:hidden;
+}
+.hero-contour{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.hero-glow{position:absolute;top:-10%;right:-5%;width:60vw;height:60vw;background:radial-gradient(circle,rgba(216,189,106,.16),transparent 62%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero .eyebrow{color:var(--brass-light);font-family:"Cormorant Garamond",serif;letter-spacing:.42em;font-size:.9rem;text-transform:uppercase;margin-bottom:1.6rem;opacity:0;animation:up .9s .2s forwards}
+.hero h1{color:#fff;font-weight:700;font-size:clamp(2.6rem,6.5vw,5rem);line-height:1.18;letter-spacing:.04em;text-shadow:0 4px 40px rgba(0,0,0,.4);opacity:0;animation:up 1s .35s forwards}
+.hero h1 .accent{color:var(--brass-light)}
+.hero p.lead{color:#dfe6dc;font-size:clamp(1rem,2vw,1.18rem);margin-top:1.8rem;max-width:38ch;font-weight:400;opacity:0;animation:up 1s .55s forwards}
+.hero .cta-row{display:flex;gap:1rem;margin-top:2.6rem;flex-wrap:wrap;opacity:0;animation:up 1s .75s forwards}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.9rem;border-radius:2px;font-weight:700;font-size:.92rem;letter-spacing:.05em;transition:.25s}
+.btn-brass{background:var(--brass);color:#12352a}
+.btn-brass:hover{background:var(--brass-light);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.hero-meta{position:absolute;bottom:2.2rem;left:0;right:0;z-index:2}
+.hero-meta .wrap{display:flex;gap:2.5rem;flex-wrap:wrap;color:#bcc9bf;font-size:.8rem;letter-spacing:.08em;border-top:1px solid rgba(255,255,255,.12);padding-top:1.1rem}
+.hero-meta b{color:#fff;font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;margin-right:.4rem}
+@keyframes up{to{opacity:1;transform:translateY(0)}}
+.hero .eyebrow,.hero h1,.hero p.lead,.hero .cta-row{transform:translateY(22px)}
+
+/* ---------- section frame ---------- */
+section.block{padding:6rem 0;position:relative}
+.sec-head{margin-bottom:3rem}
+.sec-head .kicker{display:inline-flex;align-items:center;gap:.7rem;color:var(--brass);font-family:"Cormorant Garamond",serif;letter-spacing:.34em;text-transform:uppercase;font-size:.82rem;margin-bottom:.8rem}
+.sec-head .kicker::before{content:"";width:34px;height:1px;background:var(--brass)}
+.sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:.06em;color:var(--pine)}
+.sec-head.center{text-align:center}
+.sec-head.center .kicker{justify-content:center}
+.tint{background:var(--cream)}
+.dark{background:var(--pine);color:#eae7dc}
+.dark .sec-head h2{color:#fff}
+
+/* ---------- news ---------- */
+.news-grid{display:grid;grid-template-columns:1fr;gap:0}
+.news-item{display:grid;grid-template-columns:130px 120px 1fr;gap:1.4rem;align-items:center;padding:1.25rem 0;border-bottom:1px solid var(--line);transition:.2s}
+.news-item:first-child{border-top:1px solid var(--line)}
+.news-item:hover{background:rgba(184,148,47,.05);padding-left:.6rem}
+.news-item .date{font-family:"Cormorant Garamond",serif;font-size:1.1rem;color:var(--muted);letter-spacing:.03em}
+.tag{justify-self:start;font-size:.72rem;letter-spacing:.08em;padding:.25rem .8rem;border-radius:2px;font-weight:700}
+.tag.info{background:#e7efe8;color:var(--green)}
+.tag.event{background:#f6ecd4;color:var(--brass)}
+.tag.close{background:#f3e2df;color:#a34b3c}
+.news-item .ttl{font-weight:500}
+.news-item:hover .ttl{color:var(--green)}
+
+/* ---------- course guide ---------- */
+.course-lead{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;margin-bottom:3.5rem}
+.course-vis{aspect-ratio:4/3;border-radius:3px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(18,53,42,.28)}
+.course-vis svg{width:100%;height:100%;display:block}
+.course-copy h3{font-size:1.5rem;color:var(--pine);letter-spacing:.05em;margin-bottom:1rem;line-height:1.5}
+.course-copy p{color:#4a4d43;margin-bottom:1.2rem}
+.spec-row{display:flex;gap:2.2rem;margin-top:1.6rem;flex-wrap:wrap}
+.spec{border-left:2px solid var(--brass);padding-left:1rem}
+.spec .v{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:600;color:var(--pine);line-height:1}
+.spec .l{font-size:.76rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:.3rem}
+.guide-btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--brass);color:var(--brass);padding:.7rem 1.4rem;border-radius:2px;font-weight:700;font-size:.86rem;letter-spacing:.05em;margin-bottom:1.4rem;transition:.25s;background:transparent}
+.guide-btn:hover{background:var(--brass);color:#fff;transform:translateY(-2px)}
+.guide-btn .ar{transition:transform .25s}
+.guide-btn:hover .ar{transform:translateX(4px)}
+
+/* scorecard */
+.card-title{font-family:"Shippori Mincho",serif;font-size:1.15rem;color:var(--pine);letter-spacing:.08em;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.card-title::before{content:"";width:8px;height:8px;background:var(--brass);transform:rotate(45deg)}
+.scorecard{width:100%;border-collapse:collapse;font-size:.82rem;background:var(--paper);box-shadow:0 12px 40px rgba(18,53,42,.1);border-radius:3px;overflow:hidden}
+.scorecard th,.scorecard td{padding:.6rem .5rem;text-align:center;border-bottom:1px solid var(--line)}
+.scorecard thead th{background:var(--pine);color:#fff;font-weight:500;letter-spacing:.05em;font-size:.76rem}
+.scorecard tbody th{background:var(--cream);color:var(--pine);text-align:left;padding-left:1rem;font-weight:700;white-space:nowrap}
+.scorecard .num{font-family:"Cormorant Garamond",serif;font-size:.95rem}
+.scorecard tr.total td,.scorecard tr.total th{background:#eef3ee;font-weight:700;color:var(--pine)}
+.scorecard .hl{color:var(--brass);font-weight:700}
+.tbl-scroll{overflow-x:auto}
+
+/* ---------- course rate ---------- */
+.rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.rate-card{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--brass);border-radius:3px;padding:2rem 1.6rem;text-align:center;transition:.25s}
+.rate-card:hover{transform:translateY(-4px);box-shadow:0 18px 46px rgba(18,53,42,.14)}
+.rate-card .tee{font-size:.78rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:.4rem}
+.rate-card .yard{font-family:"Cormorant Garamond",serif;font-size:2.4rem;font-weight:600;color:var(--pine);line-height:1}
+.rate-card .yard small{font-size:.9rem;color:var(--muted)}
+.rate-card .split{display:flex;justify-content:center;gap:2rem;margin-top:1.3rem;padding-top:1.3rem;border-top:1px solid var(--line)}
+.rate-card .split div .n{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--brass);font-weight:600}
+.rate-card .split div .c{font-size:.68rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+
+/* ---------- pricing ---------- */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.price-card{background:rgba(255,255,255,.05);border:1px solid rgba(216,189,106,.25);border-radius:4px;padding:2.4rem 2rem;backdrop-filter:blur(4px)}
+.price-card.feature{border-color:var(--brass);background:rgba(216,189,106,.08)}
+.price-card .pc-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:1rem;margin-bottom:1.3rem}
+.price-card .pc-head .d{font-family:"Shippori Mincho",serif;font-size:1.3rem;color:#fff;letter-spacing:.08em}
+.price-card .pc-head .badge{font-size:.68rem;letter-spacing:.14em;color:var(--pine);background:var(--brass);padding:.2rem .7rem;border-radius:2px;font-weight:700}
+.price-line{display:flex;justify-content:space-between;align-items:baseline;padding:.6rem 0}
+.price-line .k{color:#c8d2c6;font-size:.9rem}
+.price-line .v{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--brass-light);font-weight:600}
+.price-line .v small{font-size:.8rem;color:#c8d2c6}
+.price-note{margin-top:1.4rem;font-size:.76rem;color:#9fb0a2;letter-spacing:.02em}
+
+/* ---------- facility ---------- */
+.fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.fac-card{border-radius:3px;overflow:hidden;background:var(--paper);box-shadow:0 10px 34px rgba(18,53,42,.1);transition:.3s}
+.fac-card:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(18,53,42,.18)}
+.fac-vis{aspect-ratio:16/11;position:relative;overflow:hidden}
+.fac-vis svg{width:100%;height:100%}
+.fac-body{padding:1.3rem 1.4rem 1.6rem}
+.fac-body .fc-idx{font-family:"Cormorant Garamond",serif;color:var(--brass);font-size:.9rem;letter-spacing:.1em}
+.fac-body h3{font-size:1.15rem;color:var(--pine);margin:.2rem 0 .5rem;letter-spacing:.05em}
+.fac-body p{font-size:.85rem;color:var(--muted);line-height:1.7}
+
+/* ---------- gallery ---------- */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px}
+.gal-item{overflow:hidden;border-radius:3px;position:relative;cursor:pointer}
+.gal-item svg{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal-item:hover svg{transform:scale(1.08)}
+.gal-item::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:.8rem;background:linear-gradient(transparent,rgba(12,38,30,.85));color:#fff;font-size:.78rem;letter-spacing:.06em;opacity:0;transition:.3s}
+.gal-item:hover::after{opacity:1}
+.gal-item.big{grid-column:span 2;grid-row:span 2}
+.gal-item.wide{grid-column:span 2}
+
+/* ---------- weather ---------- */
+.weather{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;background:linear-gradient(135deg,#123a2c,#1d4835);border-radius:5px;padding:2.4rem 2.6rem;color:#eae7dc;box-shadow:0 20px 50px rgba(12,38,30,.3)}
+.wx-now{text-align:center;border-right:1px solid rgba(255,255,255,.14);padding-right:2.5rem}
+.wx-now .icon{font-size:3.4rem;line-height:1}
+.wx-now .temp{font-family:"Cormorant Garamond",serif;font-size:3rem;font-weight:600;color:#fff}
+.wx-now .cond{font-size:.85rem;color:var(--brass-light);letter-spacing:.1em}
+.wx-now .day{font-size:.76rem;color:#a9b8ac;letter-spacing:.14em;margin-top:.3rem}
+.wx-forecast{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;flex:1}
+.wx-day{text-align:center;padding:.8rem .3rem;border-radius:4px;transition:.2s}
+.wx-day:hover{background:rgba(255,255,255,.06)}
+.wx-day .d{font-size:.76rem;letter-spacing:.1em;color:#bcc9bf}
+.wx-day .i{font-size:1.7rem;margin:.4rem 0}
+.wx-day .t{font-family:"Cormorant Garamond",serif;font-size:1.1rem;color:#fff}
+.wx-day .t .lo{color:#8fa8bd;font-size:.9rem}
+.wx-note{text-align:center;font-size:.74rem;color:var(--muted);margin-top:1.2rem;letter-spacing:.04em}
+
+/* ---------- instagram ---------- */
+.ig-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.6rem;flex-wrap:wrap}
+.ig-acct{display:flex;align-items:center;gap:.9rem}
+.ig-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);padding:2px;flex:none}
+.ig-avatar>div{width:100%;height:100%;border-radius:50%;background:var(--pine);display:flex;align-items:center;justify-content:center}
+.ig-avatar svg{width:24px;height:24px}
+.ig-name{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.3rem;color:var(--pine);letter-spacing:.03em}
+.ig-sub{font-size:.78rem;color:var(--muted)}
+.ig-follow{display:inline-flex;align-items:center;gap:.45rem;background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;font-weight:700;font-size:.84rem;letter-spacing:.04em;padding:.6rem 1.3rem;border-radius:3px;transition:.2s}
+.ig-follow svg{width:16px;height:16px;fill:#fff}
+.ig-follow:hover{opacity:.92;transform:translateY(-2px)}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ig-tile{position:relative;aspect-ratio:1;border-radius:4px;overflow:hidden;display:block;box-shadow:0 8px 22px rgba(18,53,42,.1)}
+.ig-tile img{width:100%;height:100%;object-fit:cover}
+.ig-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.55rem;text-align:center;padding:.9rem;color:#fff}
+.ig-ph svg{width:30px;height:30px;opacity:.9}
+.ig-ph .cap{font-size:.82rem;font-weight:700;line-height:1.45;text-shadow:0 1px 6px rgba(0,0,0,.25)}
+.ig-chip{position:absolute;top:.5rem;left:.5rem;background:rgba(255,255,255,.92);color:var(--pine);font-size:.62rem;font-weight:700;letter-spacing:.06em;padding:.18rem .55rem;border-radius:2px;z-index:2}
+.ig-tile .igmark{position:absolute;top:.5rem;right:.5rem;z-index:2}
+.ig-tile .igmark svg{width:18px;height:18px;fill:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45))}
+.ig-tile .ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;opacity:0;transition:.25s;z-index:3;background:rgba(12,38,30,0)}
+.ig-tile:hover .ov{opacity:1;background:rgba(12,38,30,.42)}
+.ig-tile .ov span{display:inline-flex;align-items:center;gap:.35rem;font-size:.9rem}
+.ig-tile .ov svg{width:18px;height:18px;fill:#fff}
+.ig-more{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.8rem;color:var(--pine);font-weight:700;font-size:.9rem;border-bottom:2px solid var(--brass);padding-bottom:.2rem;transition:.2s}
+.ig-more:hover{gap:.9rem}
+@media(max-width:520px){.ig-grid{gap:6px}.ig-ph .cap{font-size:.72rem}.ig-ph svg{width:24px;height:24px}}
+
+/* ---------- access ---------- */
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:5px;overflow:hidden;box-shadow:0 20px 60px rgba(18,53,42,.16)}
+.access-info{background:var(--pine);color:#eae7dc;padding:3rem 2.8rem}
+.access-info h3{color:#fff;font-size:1.6rem;letter-spacing:.08em;margin-bottom:.4rem}
+.access-info .en{font-family:"Cormorant Garamond",serif;color:var(--brass-light);letter-spacing:.3em;text-transform:uppercase;font-size:.78rem;margin-bottom:1.8rem}
+.ac-row{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.ac-row .ic{color:var(--brass-light);flex:none;margin-top:.2rem}
+.ac-row .k{font-size:.72rem;letter-spacing:.16em;color:#9fb0a2;text-transform:uppercase;margin-bottom:.15rem}
+.ac-row .v{color:#fff;font-size:.98rem}
+.ac-row .v .num{font-size:1.2rem;color:var(--brass-light)}
+.access-map{position:relative;min-height:360px;background:#dfe4d8}
+.access-map svg{width:100%;height:100%;position:absolute;inset:0}
+.map-pin{position:absolute;top:44%;left:50%;transform:translate(-50%,-100%);z-index:2;text-align:center}
+.map-pin .lbl{background:#fff;color:var(--pine);font-size:.74rem;font-weight:700;padding:.3rem .7rem;border-radius:3px;box-shadow:0 6px 16px rgba(0,0,0,.2);white-space:nowrap;letter-spacing:.04em}
+.map-pin .dot{width:16px;height:16px;background:var(--brass);border:3px solid #fff;border-radius:50%;margin:.4rem auto 0;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.map-open{position:absolute;bottom:1rem;right:1rem;z-index:3;background:#fff;color:var(--pine);font-size:.76rem;font-weight:700;padding:.5rem .9rem;border-radius:3px;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+
+/* ---------- footer ---------- */
+footer{background:var(--pine-deep);color:#b7c4b8;padding:4rem 0 2rem}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand .name{font-family:"Shippori Mincho",serif;color:#fff;font-size:1.4rem;letter-spacing:.1em;margin-bottom:.8rem}
+.foot-brand p{font-size:.85rem;line-height:1.9}
+.foot-col h4{color:var(--brass-light);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;font-family:"Cormorant Garamond",serif}
+.foot-col a{display:block;font-size:.86rem;padding:.35rem 0;color:#b7c4b8;transition:.2s}
+.foot-col a:hover{color:#fff;padding-left:.4rem}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.8rem;font-size:.76rem;color:#7d8c7f;flex-wrap:wrap;gap:1rem}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- course guide (merged) ---------- */
+.cg-toggle{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:2.2rem;justify-content:center}
+.tg{min-width:150px;text-align:center;padding:.7rem 1rem;border:1px solid var(--line);border-radius:2px;font-weight:700;letter-spacing:.1em;color:var(--muted);cursor:pointer;transition:.2s;background:var(--paper)}
+.tg .sub{display:block;font-size:.66rem;font-family:"Cormorant Garamond",serif;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:500}
+.tg.active{background:var(--pine);color:#fff;border-color:var(--pine)}
+.tg.active .sub{color:var(--brass-light)}
+.cg-note{width:100%;text-align:center;font-size:.74rem;color:var(--muted)}
+.hole{background:var(--paper);border:1px solid var(--line);border-radius:5px;overflow:hidden;margin-bottom:1.8rem;box-shadow:0 10px 30px rgba(18,53,42,.07)}
+.hole-head{display:flex;align-items:stretch;gap:1.4rem;background:linear-gradient(100deg,var(--pine),#1c4331);color:#fff;padding:1.1rem 1.4rem}
+.hole-no{display:flex;align-items:baseline;gap:.35rem;flex:none}
+.hole-no .lbl{font-family:"Cormorant Garamond",serif;font-size:1rem;color:var(--brass-light);letter-spacing:.1em}
+.hole-no .n{font-family:"Cormorant Garamond",serif;font-size:3.1rem;font-weight:600;line-height:.9}
+.hole-facts{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.4rem;flex:1}
+.badge-par{background:var(--brass);color:var(--pine-deep);font-weight:700;padding:.22rem .8rem;border-radius:2px;font-size:.86rem;letter-spacing:.05em}
+.fact{display:flex;flex-direction:column;line-height:1.2}
+.fact .fk{font-size:.64rem;letter-spacing:.16em;color:#9fb0a2;text-transform:uppercase}
+.fact .fv{font-family:"Cormorant Garamond",serif;font-size:1.25rem;color:#fff}
+.fact .fv small{font-size:.7rem;color:#9fb0a2;letter-spacing:.05em;margin-left:.15rem}
+.hole-body{display:grid;grid-template-columns:180px 1fr;gap:1.6rem;padding:1.6rem 1.4rem}
+.layout{border:1px solid var(--line);border-radius:4px;background:linear-gradient(#eef4ec,#e3ede2);overflow:hidden;position:relative;align-self:start}
+.layout svg{width:100%;display:block}
+.layout .lcap{position:absolute;bottom:0;left:0;right:0;font-size:.6rem;letter-spacing:.12em;color:var(--muted);text-align:center;background:rgba(255,255,255,.7);padding:2px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.shots.p3{grid-template-columns:repeat(2,1fr)}
+.shot figcaption{font-size:.8rem;font-weight:700;color:var(--pine);letter-spacing:.06em;margin-top:.5rem;display:flex;align-items:center;gap:.4rem}
+.shot figcaption::before{content:"";width:7px;height:7px;background:var(--brass);transform:rotate(45deg);flex:none}
+.ph{aspect-ratio:4/3;border-radius:4px;border:1.5px dashed #c4c9b8;background:#f3f1e7 repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(184,148,47,.04) 10px,rgba(184,148,47,.04) 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;color:#a9ad9c;overflow:hidden}
+.ph svg{width:34px;height:34px;opacity:.6}
+.ph span{font-size:.72rem;letter-spacing:.08em}
+.ph img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+.hole-comment{grid-column:1/-1;border-top:1px solid var(--line);padding-top:1rem;margin-top:.2rem;font-size:.88rem;color:#4a4d43}
+.hole-comment .clabel{color:var(--brass);font-weight:700;font-size:.76rem;letter-spacing:.1em;margin-right:.5rem}
+.hole-comment em{color:var(--muted);font-style:normal;font-size:.82rem}
+.cg-summary{margin-top:2.4rem}
+.stbl-wrap{overflow-x:auto;margin-bottom:1.6rem}
+table.stbl{width:100%;border-collapse:collapse;font-size:.82rem;background:var(--paper);border-radius:4px;overflow:hidden;box-shadow:0 8px 24px rgba(18,53,42,.08)}
+table.stbl caption{font-family:"Shippori Mincho",serif;text-align:left;color:var(--pine);font-size:1.05rem;letter-spacing:.1em;padding:.6rem .2rem;caption-side:top}
+.stbl th,.stbl td{padding:.55rem .5rem;text-align:center;border-bottom:1px solid var(--line)}
+.stbl thead th{background:var(--pine);color:#fff;font-weight:500;font-size:.76rem;letter-spacing:.04em}
+.stbl tbody th{background:var(--cream);color:var(--pine);font-weight:700}
+.stbl .num{font-family:"Cormorant Garamond",serif;font-size:.96rem}
+.stbl tr.tot td,.stbl tr.tot th{background:#eef3ee;font-weight:700;color:var(--pine)}
+.stbl .hl{color:var(--brass);font-weight:700}
+.hidden{display:none}
+section[id]{scroll-margin-top:88px}
+.cg-back{display:inline-flex;align-items:center;gap:.4rem;color:var(--brass);font-weight:700;font-size:.86rem;letter-spacing:.04em;border:1px solid var(--brass);padding:.55rem 1.1rem;border-radius:2px;margin-bottom:1.8rem;transition:.2s;background:transparent}
+.cg-back:hover{background:var(--brass);color:#fff}
+@media(max-width:760px){
+  .hole-body{grid-template-columns:1fr}
+  .layout{max-width:220px;margin:0 auto}
+  .hole-no .n{font-size:2.6rem}
+}
+@media(max-width:520px){
+  .shots,.shots.p3{grid-template-columns:1fr 1fr}
+  .hole-facts{gap:.5rem 1rem}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .menu{display:none}
+  .burger{display:flex}
+  .course-lead,.price-grid,.access-grid{grid-template-columns:1fr}
+  .rate-grid,.fac-grid{grid-template-columns:1fr 1fr}
+  .weather{grid-template-columns:1fr}
+  .wx-now{border-right:0;border-bottom:1px solid rgba(255,255,255,.14);padding:0 0 1.5rem}
+  .foot-top{grid-template-columns:1fr}
+  .news-item{grid-template-columns:96px 1fr;gap:.6rem 1rem}
+  .news-item .tag{grid-row:1;grid-column:2;justify-self:start}
+  .news-item .ttl{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .rate-grid,.fac-grid,.gal-grid{grid-template-columns:1fr 1fr}
+  .wx-forecast{grid-template-columns:repeat(5,1fr);gap:.4rem}
+  .gal-item.big{grid-column:span 2;grid-row:span 1}
+  .hero-meta .wrap{gap:1.2rem}
+}
+
+/* mobile drawer */
+.drawer{position:fixed;inset:0;background:var(--pine-deep);z-index:200;transform:translateX(100%);transition:transform .35s;display:flex;flex-direction:column;padding:2rem}
+.drawer.open{transform:none}
+.drawer .close{align-self:flex-end;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+.drawer a{color:#eae7dc;font-family:"Shippori Mincho",serif;font-size:1.2rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.08);letter-spacing:.08em}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="19" stroke="#d8bd6a" stroke-width="1.4"/>
+        <path d="M20 7v20" stroke="#d8bd6a" stroke-width="1.6"/>
+        <path d="M20 8l9 3.2-9 3.2z" fill="#d8bd6a"/>
+        <circle cx="20" cy="30.5" r="2.4" fill="#d8bd6a"/>
+      </svg>
+      <span class="name">みやきカントリークラブ<small>Miyaki Country Club</small></span>
+    </a>
+    <nav class="menu">
+      <a href="#news">お知らせ</a>
+      <a href="#course">コース案内</a>
+      <a href="#rate">コースレート</a>
+      <a href="#price">料金案内</a>
+      <a href="#facility">施設案内</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#access">アクセス</a>
+      <a href="#" class="reserve">ご予約</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="close" id="close">×</button>
+  <a href="#news">お知らせ</a>
+  <a href="#course">コース案内</a>
+  <a href="#rate">コースレート</a>
+  <a href="#price">料金案内</a>
+  <a href="#facility">施設案内</a>
+  <a href="#gallery">フォトギャラリー</a>
+  <a href="#weather">天気</a>
+  <a href="#access">アクセス</a>
+  <a href="#" style="color:var(--brass-light)">ご予約はこちら ＞</a>
+</div>
+
+<div id="view-top">
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <svg class="hero-contour" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" fill="none">
+    <g stroke="#d8bd6a" stroke-width="1" opacity="0.55">
+      <path d="M-80 640 C 300 620, 560 665, 900 645 S 1320 660, 1520 640"/>
+      <path d="M-80 690 C 320 668, 620 712, 960 690 S 1340 706, 1520 686"/>
+      <path d="M-80 745 C 300 724, 640 766, 980 746 S 1360 758, 1520 742"/>
+      <path d="M-80 805 C 340 786, 660 824, 1000 806 S 1380 816, 1520 802"/>
+    </g>
+    <g stroke="#3f7256" stroke-width="1" opacity="0.5">
+      <path d="M-80 560 C 260 545, 560 585, 900 566 S 1300 578, 1520 560"/>
+      <path d="M-80 605 C 300 588, 620 628, 960 608 S 1340 620, 1520 602"/>
+    </g>
+  </svg>
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <p class="eyebrow">Riverside Course &nbsp;·&nbsp; Saga, Japan</p>
+    <h1>川風に、まっすぐ。<br><span class="accent">フラット</span>な18ホール。</h1>
+    <p class="lead">筑後川沿いに広がる、対面ホールのない一方通行の河川敷コース。広々フラットな設計で、初心者から上級者まで安心してラウンドを楽しめます。</p>
+    <div class="cta-row">
+      <a href="#" class="btn btn-brass">ご予約はこちら</a>
+      <a href="#course" class="btn btn-ghost">コースを見る ＞</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="wrap">
+      <span><b>18</b>ホール</span>
+      <span><b>PAR 70</b></span>
+      <span><b>5,298</b>ヤード（レギュラー）</span>
+      <span><b>河川敷</b>コース</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section class="block" id="news">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Information</span>
+      <h2>お知らせ</h2>
+    </div>
+    <div class="news-grid reveal">
+      <a class="news-item" href="#instagram"><span class="date">2026.07.18</span><span class="tag event">キャンペーン</span><span class="ttl">＼平日がお得に／ 平日限定・約270円引きでラウンド可能！</span></a>
+      <a class="news-item"><span class="date">2026.07.15</span><span class="tag info">お知らせ</span><span class="ttl">平日プレイ回数券〈11枚組 ¥29,900〉ご案内中</span></a>
+      <a class="news-item" href="#instagram"><span class="date">2026.07.10</span><span class="tag info">お知らせ</span><span class="ttl">公式Instagram（@miyakicc）で最新情報を配信中</span></a>
+      <a class="news-item"><span class="date">2026.07.01</span><span class="tag info">お知らせ</span><span class="ttl">ナビ付き乗用カートでコース内まで乗り入れOK</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSE ============ -->
+<section class="block tint" id="course">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Course Guide</span>
+      <h2>コース案内</h2>
+    </div>
+
+    <div class="course-lead reveal">
+      <div class="course-vis">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd7ea"/><stop offset="1" stop-color="#e8f0e4"/></linearGradient>
+            <linearGradient id="fw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4e8a5f"/><stop offset="1" stop-color="#2d5a43"/></linearGradient>
+          </defs>
+          <rect width="400" height="300" fill="url(#sky)"/>
+          <rect x="0" y="120" width="400" height="26" fill="#3f6a4c" opacity=".5"/>
+          <path d="M0 132 h400" stroke="#2c4a37" stroke-width="1.5" opacity=".4"/>
+          <rect x="0" y="146" width="400" height="26" fill="#8fb6c9" opacity=".85"/>
+          <path d="M0 150 q100 6 200 0 t200 0" stroke="#c7ddea" stroke-width="1.4" fill="none" opacity=".8"/>
+          <rect x="0" y="172" width="400" height="128" fill="url(#fw)"/>
+          <path d="M0 200 q200 -14 400 0" stroke="#4e8a5f" stroke-width="26" fill="none" opacity=".5"/>
+          <ellipse cx="250" cy="250" rx="78" ry="22" fill="#6fb07e" opacity=".55"/>
+          <circle cx="252" cy="248" r="4" fill="#f5f1e6"/>
+          <path d="M252 248 V222" stroke="#c0392b" stroke-width="2"/>
+          <path d="M252 222 l12 4 -12 4 z" fill="#c0392b"/>
+          <ellipse cx="120" cy="262" rx="40" ry="11" fill="#d9c9a0"/>
+          <path d="M334 172 L342 150 L350 172 Z" fill="#1f4a34" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="course-copy">
+        <a href="#" id="openGuide" class="guide-btn">全18ホール コースガイド<span class="ar">→</span></a>
+        <h3>広々フラット、<br>のびのび振り抜く。</h3>
+        <p>筑後川の河川敷に展開する、アウト・イン各9ホール。対面ホールのない片流れ・一方通行のレイアウトで、隣を気にせず安心してプレーできます。フラットで広いフェアウェイは、初心者の練習にも上級者のスコアメイクにも。</p>
+        <p>ベント（ペンクロス）グリーンの美しい転がりと、堤防越しに感じる川風。ナビ付き乗用カートでコース内まで乗り入れでき、ゆったり快適にラウンドできます。</p>
+        <div class="spec-row">
+          <div class="spec"><div class="v">70</div><div class="l">Par</div></div>
+          <div class="spec"><div class="v">5,298<span style="font-size:.9rem">y</span></div><div class="l">Regular Tee</div></div>
+          <div class="spec"><div class="v">18</div><div class="l">Holes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="card-title">スコアカード（OUT / IN）</div>
+      <div class="tbl-scroll">
+        <table class="scorecard">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding-left:1rem">HOLE</th>
+              <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+              <th class="hl">OUT</th>
+              <th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th>
+              <th class="hl">IN</th><th class="hl">TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>PAR</th>
+              <td class="num">4</td><td class="num">5</td><td class="num">3</td><td class="num">4</td><td class="num">3</td><td class="num">5</td><td class="num">4</td><td class="num">4</td><td class="num">3</td>
+              <td class="num hl">35</td>
+              <td class="num">4</td><td class="num">5</td><td class="num">3</td><td class="num">4</td><td class="num">3</td><td class="num">5</td><td class="num">4</td><td class="num">4</td><td class="num">3</td>
+              <td class="num hl">35</td><td class="num hl">70</td>
+            </tr>
+            <tr>
+              <th>R.T</th>
+              <td class="num">310</td><td class="num">530</td><td class="num">160</td><td class="num">320</td><td class="num">107</td><td class="num">500</td><td class="num">330</td><td class="num">300</td><td class="num">135</td>
+              <td class="num hl">2,692</td>
+              <td class="num">290</td><td class="num">530</td><td class="num">135</td><td class="num">300</td><td class="num">136</td><td class="num">510</td><td class="num">300</td><td class="num">300</td><td class="num">105</td>
+              <td class="num hl">2,606</td><td class="num hl">5,298</td>
+            </tr>
+            <tr>
+              <th>L.T</th>
+              <td class="num">270</td><td class="num">450</td><td class="num">134</td><td class="num">307</td><td class="num">93</td><td class="num">420</td><td class="num">313</td><td class="num">264</td><td class="num">125</td>
+              <td class="num hl">2,376</td>
+              <td class="num">250</td><td class="num">450</td><td class="num">109</td><td class="num">287</td><td class="num">122</td><td class="num">430</td><td class="num">283</td><td class="num">264</td><td class="num">95</td>
+              <td class="num hl">2,290</td><td class="num hl">4,666</td>
+            </tr>
+            <tr class="total">
+              <th>HDCP</th>
+              <td class="num">14</td><td class="num">2</td><td class="num">6</td><td class="num">12</td><td class="num">16</td><td class="num">4</td><td class="num">18</td><td class="num">10</td><td class="num">8</td>
+              <td class="num hl">—</td>
+              <td class="num">13</td><td class="num">1</td><td class="num">5</td><td class="num">11</td><td class="num">15</td><td class="num">3</td><td class="num">17</td><td class="num">9</td><td class="num">7</td>
+              <td class="num hl">—</td><td class="num hl">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:.8rem">単位：ヤード（R.T＝レギュラーティ／L.T＝レディースティ）。OUT 2,692y・IN 2,606y、合計 5,298y（R.T）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSE RATE ============ -->
+<section class="block" id="rate">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Course Rating</span>
+      <h2>コースレート</h2>
+    </div>
+    <div class="rate-grid reveal" style="grid-template-columns:repeat(2,1fr);max-width:720px;margin:0 auto">
+      <div class="rate-card">
+        <div class="tee">Regular Tee ／ R.T</div>
+        <div class="yard">5,298<small> y</small></div>
+        <div class="split">
+          <div><div class="n">2,692</div><div class="c">OUT</div></div>
+          <div><div class="n">2,606</div><div class="c">IN</div></div>
+        </div>
+      </div>
+      <div class="rate-card">
+        <div class="tee">Ladies Tee ／ L.T</div>
+        <div class="yard">4,666<small> y</small></div>
+        <div class="split">
+          <div><div class="n">2,376</div><div class="c">OUT</div></div>
+          <div><div class="n">2,290</div><div class="c">IN</div></div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:.78rem;color:var(--muted);margin-top:1.6rem">全18ホール・パー70。コースレート／スロープレートは未査定（－）です。正式な認定値があれば差し替えてください。</p>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="block dark" id="price">
+  <svg style="position:absolute;top:0;right:0;width:40%;opacity:.12" viewBox="0 0 400 400" fill="none"><g stroke="#d8bd6a" stroke-width="1"><path d="M0 100 C120 60 260 120 400 70"/><path d="M0 150 C120 110 260 170 400 120"/><path d="M0 200 C120 160 260 220 400 170"/><path d="M0 250 C120 210 260 270 400 220"/></g></svg>
+  <div class="wrap" style="position:relative">
+    <div class="sec-head reveal">
+      <span class="kicker">Green Fee</span>
+      <h2>料金案内</h2>
+    </div>
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <div class="pc-head"><span class="d">平日</span><span style="font-size:.78rem;color:#9fb0a2">月〜金</span></div>
+        <div class="price-line"><span class="k">18ホール セルフ（乗用カート付）</span><span class="v">¥3,200</span></div>
+        <div class="price-note">完全セルフプレー／ナビ付き乗用カート・コース内乗り入れOK。</div>
+      </div>
+      <div class="price-card feature">
+        <div class="pc-head"><span class="d">土日祝</span><span class="badge">土日祝</span></div>
+        <div class="price-line"><span class="k">18ホール セルフ（乗用カート付）</span><span class="v">¥4,600</span></div>
+        <div class="price-note">完全セルフプレー／ナビ付き乗用カート・コース内乗り入れOK。</div>
+      </div>
+    </div>
+    <p style="font-size:.78rem;color:#9fb0a2;margin-top:1.4rem;text-align:center">※上記は18ホール・セルフの料金です。別途、ゴルフ場利用税・ゴルフ募金として当日210円を申し受けます。<br>※平日プレイ回数券〈11枚組 ¥29,900〉もご用意。9ホール・早朝・薄暮プレーは別途。レンタルクラブ・シューズあり（有料）。</p>
+  </div>
+</section>
+
+<!-- ============ FACILITY ============ -->
+<section class="block tint" id="facility">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Facilities</span>
+      <h2>施設案内</h2>
+    </div>
+    <div class="fac-grid reveal">
+      <div class="fac-card">
+        <div class="fac-vis"><svg viewBox="0 0 320 220"><rect width="320" height="220" fill="#e7efe8"/><rect x="40" y="90" width="240" height="110" fill="#c9d8cb"/><polygon points="40,90 160,40 280,90" fill="#3f7256"/><rect x="140" y="140" width="40" height="60" fill="#fff"/><rect x="70" y="120" width="30" height="30" fill="#fff"/><rect x="220" y="120" width="30" height="30" fill="#fff"/></svg></div>
+        <div class="fac-body"><span class="fc-idx">01</span><h3>クラブハウス</h3><p>気軽に立ち寄れるクラブハウス。無料の更衣室・シャワールームを完備しています。</p></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-vis"><svg viewBox="0 0 320 220"><rect width="320" height="220" fill="#efe7d8"/><rect x="0" y="150" width="320" height="70" fill="#d8c7a6"/><circle cx="110" cy="120" r="26" fill="#b8942f" opacity=".8"/><rect x="180" y="96" width="70" height="50" rx="4" fill="#fff"/><rect x="60" y="160" width="200" height="8" fill="#a8895f"/></svg></div>
+        <div class="fac-body"><span class="fc-idx">02</span><h3>レストラン</h3><p>ラウンドの合間にひと息。軽食やお食事をご用意しています。<span style="color:var(--muted);font-size:.8rem">（メニュー詳細は要確認）</span></p></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-vis"><svg viewBox="0 0 320 220"><rect width="320" height="220" fill="#e2ecdd"/><rect x="0" y="140" width="320" height="80" fill="#5a9968"/><path d="M30 150 h260" stroke="#fff" stroke-dasharray="6 10" stroke-width="2"/><circle cx="70" cy="120" r="5" fill="#fff"/><circle cx="150" cy="110" r="5" fill="#fff"/><circle cx="230" cy="118" r="5" fill="#fff"/></svg></div>
+        <div class="fac-body"><span class="fc-idx">03</span><h3>ナビ付き乗用カート</h3><p>全ホールでナビ付き乗用カートをご利用可能。コース内まで乗り入れでき、ご年配の方も楽々ラウンド。</p></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-vis"><svg viewBox="0 0 320 220"><rect width="320" height="220" fill="#e7efe8"/><rect x="70" y="70" width="50" height="120" fill="#8aa0d6"/><rect x="135" y="70" width="50" height="120" fill="#9fb2df"/><rect x="200" y="70" width="50" height="120" fill="#8aa0d6"/><rect x="70" y="60" width="180" height="12" fill="#3f7256"/></svg></div>
+        <div class="fac-body"><span class="fc-idx">04</span><h3>更衣室・シャワー</h3><p>クラブハウス内に更衣室・シャワールームを無料でご用意。プレー後もさっぱり。</p></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-vis"><svg viewBox="0 0 320 220"><rect width="320" height="220" fill="#efe7d8"/><rect x="50" y="80" width="220" height="100" rx="6" fill="#fff"/><rect x="70" y="100" width="80" height="60" fill="#c9d8cb"/><rect x="170" y="100" width="80" height="16" fill="#b8942f"/><rect x="170" y="126" width="60" height="10" fill="#d8c7a6"/></svg></div>
+        <div class="fac-body"><span class="fc-idx">05</span><h3>レンタルクラブ</h3><p>クラブ・シューズのレンタルあり（有料）。手ぶらでも気軽にお越しいただけます。</p></div>
+      </div>
+      <div class="fac-card">
+        <div class="fac-vis"><svg viewBox="0 0 320 220"><rect width="320" height="220" fill="#e2ecdd"/><rect x="40" y="150" width="240" height="50" fill="#7d7d85"/><rect x="60" y="160" width="40" height="30" fill="#fff"/><rect x="120" y="160" width="40" height="30" fill="#fff"/><rect x="180" y="160" width="40" height="30" fill="#fff"/><rect x="240" y="160" width="30" height="30" fill="#fff"/></svg></div>
+        <div class="fac-body"><span class="fc-idx">06</span><h3>駐車場</h3><p>無料駐車場を完備。河川敷ならではの広々とした立地です。<span style="color:var(--muted);font-size:.8rem">（収容台数は要確認）</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="block" id="gallery">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Photo Gallery</span>
+      <h2>フォトギャラリー</h2>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gal-item big" data-cap="18番ホール ／ 朝もや">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe0ec"/><stop offset="1" stop-color="#5a9968"/></linearGradient></defs><rect width="400" height="400" fill="url(#g1)"/><path d="M0 240 Q200 200 400 250 V400 H0Z" fill="#2d5a43"/><circle cx="200" cy="290" r="4" fill="#f5f1e6"/><path d="M200 290V255" stroke="#c0392b" stroke-width="2"/></svg>
+      </div>
+      <div class="gal-item" data-cap="9番グリーン"><svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice"><rect width="200" height="200" fill="#6fb07e"/><ellipse cx="100" cy="120" rx="70" ry="34" fill="#4e8a5f"/><circle cx="100" cy="118" r="4" fill="#fff"/></svg></div>
+      <div class="gal-item" data-cap="バンカー"><svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice"><rect width="200" height="200" fill="#5a9968"/><ellipse cx="100" cy="110" rx="72" ry="46" fill="#e3d3a8"/><ellipse cx="100" cy="110" rx="50" ry="30" fill="#eaddba"/></svg></div>
+      <div class="gal-item wide" data-cap="フェアウェイ遠景"><svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd7ea"/><stop offset="1" stop-color="#4e8a5f"/></linearGradient></defs><rect width="400" height="200" fill="url(#g2)"/><path d="M0 120 Q200 90 400 130 V200 H0Z" fill="#2d5a43"/><path d="M40 200 L55 90 L70 200Z" fill="#1f4a34"/></svg></div>
+      <div class="gal-item" data-cap="クラブハウス"><svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice"><rect width="200" height="200" fill="#e7efe8"/><rect x="30" y="90" width="140" height="90" fill="#c9d8cb"/><polygon points="30,90 100,50 170,90" fill="#3f7256"/></svg></div>
+      <div class="gal-item" data-cap="紅葉のコース"><svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice"><rect width="200" height="200" fill="#e8c98a"/><path d="M0 130 Q100 100 200 140 V200 H0Z" fill="#5a9968"/><circle cx="60" cy="80" r="22" fill="#c0392b" opacity=".7"/><circle cx="140" cy="70" r="26" fill="#d98b2b" opacity=".7"/></svg></div>
+      <div class="gal-item" data-cap="ティグラウンド"><svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice"><rect width="200" height="200" fill="#6fb07e"/><rect x="0" y="120" width="200" height="80" fill="#4e8a5f"/><rect x="80" y="112" width="40" height="8" fill="#3f7256"/></svg></div>
+    </div>
+    <p style="text-align:center;font-size:.78rem;color:var(--muted);margin-top:1.4rem">※写真はすべて仮のイメージです。実際のコース写真に差し替えてください。</p>
+  </div>
+</section>
+
+<!-- ============ WEATHER ============ -->
+<section class="block tint" id="weather">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Weather</span>
+      <h2>お天気</h2>
+    </div>
+    <div class="weather reveal">
+      <div class="wx-now">
+        <div class="icon">☀️</div>
+        <div class="temp">31°</div>
+        <div class="cond">晴れ</div>
+        <div class="day">本日 7月20日（日）</div>
+      </div>
+      <div>
+        <div class="wx-forecast">
+          <div class="wx-day"><div class="d">月</div><div class="i">⛅</div><div class="t">30<span class="lo">/24</span></div></div>
+          <div class="wx-day"><div class="d">火</div><div class="i">🌧️</div><div class="t">27<span class="lo">/23</span></div></div>
+          <div class="wx-day"><div class="d">水</div><div class="i">☁️</div><div class="t">29<span class="lo">/24</span></div></div>
+          <div class="wx-day"><div class="d">木</div><div class="i">☀️</div><div class="t">32<span class="lo">/25</span></div></div>
+          <div class="wx-day"><div class="d">金</div><div class="i">☀️</div><div class="t">33<span class="lo">/26</span></div></div>
+        </div>
+        <div class="wx-note" style="color:#9fb0a2">※天気は仮のデータです。tenki.jp等のゴルフ天気APIやウィジェットと連携予定。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="block" id="instagram">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Instagram</span>
+      <h2>公式インスタグラム</h2>
+    </div>
+    <div class="ig-head reveal">
+      <div class="ig-acct">
+        <div class="ig-avatar"><div><svg viewBox="0 0 24 24" fill="none" stroke="#d8bd6a" stroke-width="1.6"><path d="M7 21V4"/><path d="M7 4l11 3-11 3" fill="#d8bd6a" stroke="none"/><path d="M7 4l11 3-11 3"/></svg></div></div>
+        <div>
+          <div class="ig-name">@miyakicc</div>
+          <div class="ig-sub">みやきカントリークラブ 公式アカウント</div>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/miyakicc/" target="_blank" rel="noopener" class="ig-follow"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.1 0 4.1.06 1 .05 1.7.2 2.3.44.6.24 1.1.56 1.6 1.06.5.5.82 1 1.06 1.6.24.6.39 1.3.44 2.3.05 1 .06 1.4.06 4.1s0 3.1-.06 4.1c-.05 1-.2 1.7-.44 2.3a4.3 4.3 0 01-1.06 1.6c-.5.5-1 .82-1.6 1.06-.6.24-1.3.39-2.3.44-1 .05-1.4.06-4.1.06s-3.1 0-4.1-.06c-1-.05-1.7-.2-2.3-.44a4.3 4.3 0 01-1.6-1.06 4.3 4.3 0 01-1.06-1.6c-.24-.6-.39-1.3-.44-2.3C2 15.1 2 14.7 2 12s0-3.1.06-4.1c.05-1 .2-1.7.44-2.3A4.3 4.3 0 013.56 4c.5-.5 1-.82 1.6-1.06.6-.24 1.3-.39 2.3-.44C8.9 2 9.3 2 12 2zm0 1.8c-2.65 0-2.97 0-4 .06-.77.03-1.19.16-1.47.27-.37.14-.63.31-.91.59-.28.28-.45.54-.59.91-.11.28-.24.7-.27 1.47-.05 1.03-.06 1.35-.06 4s0 2.97.06 4c.03.77.16 1.19.27 1.47.14.37.31.63.59.91.28.28.54.45.91.59.28.11.7.24 1.47.27 1.03.05 1.35.06 4 .06s2.97 0 4-.06c.77-.03 1.19-.16 1.47-.27.37-.14.63-.31.91-.59.28-.28.45-.54.59-.91.11-.28.24-.7.27-1.47.05-1.03.06-1.35.06-4s0-2.97-.06-4c-.03-.77-.16-1.19-.27-1.47a2.5 2.5 0 00-.59-.91 2.5 2.5 0 00-.91-.59c-.28-.11-.7-.24-1.47-.27-1.03-.05-1.35-.06-4-.06zm0 3.06a5.14 5.14 0 110 10.28 5.14 5.14 0 010-10.28zm0 1.8a3.34 3.34 0 100 6.68 3.34 3.34 0 000-6.68zm5.34-3.15a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg> フォローする</a>
+    </div>
+    <div class="ig-grid reveal" id="ig-grid"></div>
+    <div style="text-align:center">
+      <a class="ig-more" href="https://www.instagram.com/miyakicc/" target="_blank" rel="noopener">Instagramで投稿をもっと見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACCESS ============ -->
+<section class="block" id="access">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Access</span>
+      <h2>アクセス</h2>
+    </div>
+    <div class="access-grid reveal">
+      <div class="access-info">
+        <h3>みやきカントリークラブ</h3>
+        <div class="en">Miyaki Country Club</div>
+        <div class="ac-row">
+          <span class="ic">📍</span>
+          <div><div class="k">Address</div><div class="v">〒840-1101<br>佐賀県三養基郡みやき町西島3317</div></div>
+        </div>
+        <div class="ac-row">
+          <span class="ic">☎</span>
+          <div><div class="k">Tel / Fax</div><div class="v"><span class="num">0942-96-3411</span><br><span style="font-size:.82rem;color:#c8d2c6">FAX&nbsp;<span class="num">0942-96-3354</span></span></div></div>
+        </div>
+        <div class="ac-row">
+          <span class="ic">🚗</span>
+          <div><div class="k">By Car</div><div class="v">長崎自動車道 鳥栖ICより約14km<br>筑後川沿い・みやき町西島</div></div>
+        </div>
+        <div class="ac-row" style="border-bottom:0">
+          <span class="ic">🕕</span>
+          <div><div class="k">Hours</div><div class="v">営業時間・定休日は要確認</div></div>
+        </div>
+      </div>
+      <div class="access-map">
+        <svg viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="360" fill="#dbe4d5"/>
+          <path d="M0 120 H400 M0 240 H400 M120 0 V360 M280 0 V360" stroke="#c3cfba" stroke-width="10"/>
+          <path d="M0 60 C120 90 280 40 400 80" stroke="#a9c4d8" stroke-width="14" fill="none"/>
+          <rect x="150" y="150" width="100" height="70" rx="6" fill="#6fb07e"/>
+          <circle cx="200" cy="185" r="3" fill="#fff"/>
+          <text x="20" y="330" font-family="serif" font-size="11" fill="#8a9584">みやき町 西島 周辺（イメージ）</text>
+        </svg>
+        <div class="map-pin"><div class="lbl">みやきカントリークラブ</div><div class="dot"></div></div>
+        <a href="https://www.google.com/maps/search/?api=1&query=佐賀県三養基郡みやき町西島3317" target="_blank" rel="noopener" class="map-open">Googleマップで開く ＞</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /view-top -->
+
+<div id="view-guide" class="hidden">
+<!-- ============ COURSE GUIDE ============ -->
+<section class="block" id="courseguide">
+  <div class="wrap">
+    <a href="#" class="cg-back" id="backTop">← トップページへ戻る</a>
+    <div class="sec-head center reveal">
+      <span class="kicker">Course Guide</span>
+      <h2>コースガイド（全18ホール）</h2>
+    </div>
+    <div class="cg-toggle reveal">
+      <div class="tg active" data-target="out">OUT<span class="sub">No.1 – 9</span></div>
+      <div class="tg" data-target="in">IN<span class="sub">No.10 – 18</span></div>
+      <span class="cg-note">※レイアウト図はイメージです。各ホールの写真は準備中です。</span>
+    </div>
+    <div id="out-holes"></div>
+    <div id="in-holes" class="hidden"></div>
+
+    <div class="cg-summary reveal">
+      <div class="stbl-wrap">
+        <table class="stbl">
+          <caption>OUT コース</caption>
+          <thead><tr><th>HOLE</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th class="hl">計</th></tr></thead>
+          <tbody>
+            <tr><th>PAR</th><td class="num">4</td><td class="num">5</td><td class="num">3</td><td class="num">4</td><td class="num">3</td><td class="num">5</td><td class="num">4</td><td class="num">4</td><td class="num">3</td><td class="num hl">35</td></tr>
+            <tr><th>R.T</th><td class="num">310</td><td class="num">530</td><td class="num">160</td><td class="num">320</td><td class="num">107</td><td class="num">500</td><td class="num">330</td><td class="num">300</td><td class="num">135</td><td class="num hl">2,692</td></tr>
+            <tr><th>L.T</th><td class="num">270</td><td class="num">450</td><td class="num">134</td><td class="num">307</td><td class="num">93</td><td class="num">420</td><td class="num">313</td><td class="num">264</td><td class="num">125</td><td class="num hl">2,376</td></tr>
+            <tr class="tot"><th>HDCP</th><td class="num">14</td><td class="num">2</td><td class="num">6</td><td class="num">12</td><td class="num">16</td><td class="num">4</td><td class="num">18</td><td class="num">10</td><td class="num">8</td><td class="num hl">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="stbl-wrap">
+        <table class="stbl">
+          <caption>IN コース</caption>
+          <thead><tr><th>HOLE</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th class="hl">計</th></tr></thead>
+          <tbody>
+            <tr><th>PAR</th><td class="num">4</td><td class="num">5</td><td class="num">3</td><td class="num">4</td><td class="num">3</td><td class="num">5</td><td class="num">4</td><td class="num">4</td><td class="num">3</td><td class="num hl">35</td></tr>
+            <tr><th>R.T</th><td class="num">290</td><td class="num">530</td><td class="num">135</td><td class="num">300</td><td class="num">136</td><td class="num">510</td><td class="num">300</td><td class="num">300</td><td class="num">105</td><td class="num hl">2,606</td></tr>
+            <tr><th>L.T</th><td class="num">250</td><td class="num">450</td><td class="num">109</td><td class="num">287</td><td class="num">122</td><td class="num">430</td><td class="num">283</td><td class="num">264</td><td class="num">95</td><td class="num hl">2,290</td></tr>
+            <tr class="tot"><th>HDCP</th><td class="num">13</td><td class="num">1</td><td class="num">5</td><td class="num">11</td><td class="num">15</td><td class="num">3</td><td class="num">17</td><td class="num">9</td><td class="num">7</td><td class="num hl">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center;font-size:.8rem;color:var(--muted)">単位：ヤード ／ R.T＝レギュラーティ・L.T＝レディースティ ／ 合計 R.T 5,298y・L.T 4,666y・PAR 70</p>
+    </div>
+  </div>
+</section>
+</div><!-- /view-guide -->
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="name">みやきカントリークラブ</div>
+        <p>〒840-1101 佐賀県三養基郡みやき町西島3317<br>TEL 0942-96-3411／FAX 0942-96-3354<br>18ホール・パー70／筑後川沿いの河川敷コース</p>
+      </div>
+      <div class="foot-col">
+        <h4>Menu</h4>
+        <a href="#news">お知らせ</a>
+        <a href="#course">コース案内</a>
+        <a href="#rate">コースレート</a>
+        <a href="#price">料金案内</a>
+      </div>
+      <div class="foot-col">
+        <h4>Guide</h4>
+        <a href="#facility">施設案内</a>
+        <a href="#gallery">フォトギャラリー</a>
+        <a href="#weather">お天気</a>
+        <a href="#access">アクセス</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 みやきカントリークラブ. All Rights Reserved.</span>
+      <span style="font-family:'Cormorant Garamond',serif;letter-spacing:.2em">MIYAKI COUNTRY CLUB</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// header solid on scroll
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>{hdr.classList.toggle('solid',scrollY>60)});
+// mobile drawer
+const drawer=document.getElementById('drawer');
+document.getElementById('burger').onclick=()=>drawer.classList.add('open');
+document.getElementById('close').onclick=()=>drawer.classList.remove('open');
+drawer.querySelectorAll('a').forEach(a=>a.onclick=()=>drawer.classList.remove('open'));
+// reveal on scroll
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ====== コースガイド ======
+   写真を入れるときは、各ホールの tee / second / green に画像URLを入れてください。
+   例）{no:1, ..., tee:"images/hole1_tee.jpg", second:"images/hole1_2nd.jpg", green:"images/hole1_green.jpg"}
+   空欄のままだと「写真を追加」プレースホルダが表示されます。 */
+const holes=[
+  {no:1, par:4, hdcp:14, rt:310, lt:270, tee:"", second:"", green:"", comment:""},
+  {no:2, par:5, hdcp:2,  rt:530, lt:450, tee:"", second:"", green:"", comment:""},
+  {no:3, par:3, hdcp:6,  rt:160, lt:134, tee:"", green:"", comment:""},
+  {no:4, par:4, hdcp:12, rt:320, lt:307, tee:"", second:"", green:"", comment:""},
+  {no:5, par:3, hdcp:16, rt:107, lt:93,  tee:"", green:"", comment:""},
+  {no:6, par:5, hdcp:4,  rt:500, lt:420, tee:"", second:"", green:"", comment:""},
+  {no:7, par:4, hdcp:18, rt:330, lt:313, tee:"", second:"", green:"", comment:""},
+  {no:8, par:4, hdcp:10, rt:300, lt:264, tee:"", second:"", green:"", comment:""},
+  {no:9, par:3, hdcp:8,  rt:135, lt:125, tee:"", green:"", comment:""},
+  {no:10,par:4, hdcp:13, rt:290, lt:250, tee:"", second:"", green:"", comment:""},
+  {no:11,par:5, hdcp:1,  rt:530, lt:450, tee:"", second:"", green:"", comment:""},
+  {no:12,par:3, hdcp:5,  rt:135, lt:109, tee:"", green:"", comment:""},
+  {no:13,par:4, hdcp:11, rt:300, lt:287, tee:"", second:"", green:"", comment:""},
+  {no:14,par:3, hdcp:15, rt:136, lt:122, tee:"", green:"", comment:""},
+  {no:15,par:5, hdcp:3,  rt:510, lt:430, tee:"", second:"", green:"", comment:""},
+  {no:16,par:4, hdcp:17, rt:300, lt:283, tee:"", second:"", green:"", comment:""},
+  {no:17,par:4, hdcp:9,  rt:300, lt:264, tee:"", second:"", green:"", comment:""},
+  {no:18,par:3, hdcp:7,  rt:105, lt:95,  tee:"", green:"", comment:""},
+];
+
+function layoutSVG(par){
+  const grass='#cfe3d0', fw='#8fc79b', gr='#5aa16f', sand='#ecdcb2';
+  if(par===3){
+    return `<svg viewBox="0 0 200 260"><rect width="200" height="260" fill="${grass}"/>
+      <path d="M80 235 C70 170 130 150 118 70 L86 70 C96 150 60 175 70 235 Z" fill="${fw}"/>
+      <ellipse cx="102" cy="60" rx="34" ry="26" fill="${gr}"/>
+      <circle cx="102" cy="58" r="3.2" fill="#fff"/><path d="M102 58 V38" stroke="#c0392b" stroke-width="2"/><path d="M102 38 l9 3 -9 3 z" fill="#c0392b"/>
+      <ellipse cx="60" cy="80" rx="15" ry="10" fill="${sand}"/>
+      <rect x="88" y="232" width="26" height="7" rx="2" fill="#3a3f36"/></svg>`;
+  }
+  if(par===5){
+    return `<svg viewBox="0 0 200 260"><rect width="200" height="260" fill="${grass}"/>
+      <path d="M70 240 C60 205 95 195 100 165 C104 138 60 128 70 95 C80 62 140 66 132 40 L150 40 C160 74 96 78 92 100 C88 128 132 138 128 168 C124 200 96 208 104 240 Z" fill="${fw}"/>
+      <ellipse cx="140" cy="34" rx="30" ry="22" fill="${gr}"/>
+      <circle cx="140" cy="32" r="3.2" fill="#fff"/><path d="M140 32 V14" stroke="#c0392b" stroke-width="2"/><path d="M140 14 l9 3 -9 3 z" fill="#c0392b"/>
+      <ellipse cx="112" cy="46" rx="12" ry="8" fill="${sand}"/>
+      <ellipse cx="60" cy="120" rx="12" ry="9" fill="${sand}"/>
+      <rect x="76" y="236" width="24" height="7" rx="2" fill="#3a3f36"/></svg>`;
+  }
+  return `<svg viewBox="0 0 200 260"><rect width="200" height="260" fill="${grass}"/>
+    <path d="M72 238 C64 190 96 178 100 130 C104 88 150 90 140 50 L158 50 C170 96 118 96 116 132 C114 182 100 196 106 238 Z" fill="${fw}"/>
+    <ellipse cx="150" cy="44" rx="30" ry="22" fill="${gr}"/>
+    <circle cx="150" cy="42" r="3.2" fill="#fff"/><path d="M150 42 V22" stroke="#c0392b" stroke-width="2"/><path d="M150 22 l9 3 -9 3 z" fill="#c0392b"/>
+    <ellipse cx="120" cy="58" rx="12" ry="8" fill="${sand}"/>
+    <ellipse cx="86" cy="150" rx="11" ry="8" fill="${sand}"/>
+    <rect x="78" y="234" width="24" height="7" rx="2" fill="#3a3f36"/></svg>`;
+}
+
+const camIcon=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8a2 2 0 012-2h2l1.2-1.6a1 1 0 01.8-.4h6a1 1 0 01.8.4L18 6h1a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/><circle cx="12" cy="12.5" r="3.4"/></svg>`;
+
+function shotFig(label, url){
+  const inner = url && url.trim()!=="" ? `<img src="${url}" alt="${label}">` : `${camIcon}<span>写真を追加</span>`;
+  return `<figure class="shot"><div class="ph">${inner}</div><figcaption>${label}</figcaption></figure>`;
+}
+
+function holeCard(h){
+  const isP3 = h.par===3;
+  let shots = shotFig("ティーショット", h.tee);
+  if(!isP3) shots += shotFig("セカンド", h.second);
+  shots += shotFig("グリーン", h.green);
+  const comment = (h.comment && h.comment.trim()!=="")
+    ? `<span class="clabel">攻略ポイント</span>${h.comment}`
+    : `<span class="clabel">攻略ポイント</span><em>コメントは準備中です。</em>`;
+  return `<article class="hole">
+    <div class="hole-head">
+      <div class="hole-no"><span class="lbl">No.</span><span class="n">${h.no}</span></div>
+      <div class="hole-facts">
+        <span class="badge-par">PAR ${h.par}</span>
+        <div class="fact"><span class="fk">R.T</span><span class="fv">${h.rt}<small>y</small></span></div>
+        <div class="fact"><span class="fk">L.T</span><span class="fv">${h.lt}<small>y</small></span></div>
+        <div class="fact"><span class="fk">HDCP</span><span class="fv">${h.hdcp}</span></div>
+      </div>
+    </div>
+    <div class="hole-body">
+      <div class="layout">${layoutSVG(h.par)}<div class="lcap">LAYOUT（イメージ）</div></div>
+      <div class="shots ${isP3?'p3':''}">${shots}</div>
+      <p class="hole-comment">${comment}</p>
+    </div>
+  </article>`;
+}
+
+document.getElementById('out-holes').innerHTML = holes.slice(0,9).map(holeCard).join('');
+document.getElementById('in-holes').innerHTML  = holes.slice(9).map(holeCard).join('');
+
+document.querySelectorAll('#courseguide .tg').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('#courseguide .tg').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const t=btn.dataset.target;
+    document.getElementById('out-holes').classList.toggle('hidden', t!=='out');
+    document.getElementById('in-holes').classList.toggle('hidden', t!=='in');
+    const y=document.querySelector('#courseguide .cg-toggle').getBoundingClientRect().top+window.scrollY-90;
+    window.scrollTo({top:y,behavior:'smooth'});
+  });
+});
+
+/* ===== ビュー切替（トップ ⇄ コースガイド） ===== */
+(function(){
+  var viewTop=document.getElementById('view-top');
+  var viewGuide=document.getElementById('view-guide');
+  function revealIn(el){el.querySelectorAll('.reveal').forEach(function(r){r.classList.add('in');});}
+  function showGuide(){viewTop.classList.add('hidden');viewGuide.classList.remove('hidden');revealIn(viewGuide);window.scrollTo({top:0});}
+  function showTop(){viewGuide.classList.add('hidden');viewTop.classList.remove('hidden');}
+  var openBtn=document.getElementById('openGuide');
+  if(openBtn) openBtn.addEventListener('click',function(e){e.preventDefault();showGuide();});
+  var backBtn=document.getElementById('backTop');
+  if(backBtn) backBtn.addEventListener('click',function(e){e.preventDefault();showTop();window.scrollTo({top:0});});
+  // header / drawer anchors: return to top view first, then scroll to target
+  document.querySelectorAll('header a[href^="#"], #drawer a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var href=a.getAttribute('href');
+      if(!href||href==='#') return;
+      e.preventDefault();
+      var d=document.getElementById('drawer'); if(d) d.classList.remove('open');
+      showTop();
+      var t=document.querySelector(href);
+      if(t) requestAnimationFrame(function(){t.scrollIntoView({behavior:'smooth'});});
+    });
+  });
+})();
+
+/* ===== Instagram フィード =====
+   サムネイルを差し替えるには、各投稿の img に画像URL、link に投稿URLを入れてください。
+   例）{img:"images/ig1.jpg", link:"https://www.instagram.com/p/XXXX/", chip:"", cap:"..."}
+   img が空欄のときは、キャプション付きのプレースホルダタイルを表示します。 */
+const igPosts=[
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"キャンペーン", cap:"平日がお得｜約270円引き"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"回数券", cap:"平日プレイ回数券\n11枚組 ¥29,900"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"", cap:"筑後川沿いの河川敷コース"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"", cap:"ナビ付き乗用カート乗り入れOK"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"", cap:"広々フラットなフェアウェイ"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"", cap:"ベントグリーンの美しい転がり"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"", cap:"川風を感じる一日を"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"", cap:"コースガイドはこちら"},
+  {img:"", link:"https://www.instagram.com/miyakicc/", chip:"", cap:"#佐賀ゴルフ #河川敷ゴルフ"},
+];
+const igGrads=['linear-gradient(135deg,#2d5a43,#12352a)','linear-gradient(135deg,#3f7256,#1c4331)','linear-gradient(160deg,#5a9968,#2d5a43)','linear-gradient(135deg,#4e8a5f,#0c261e)','linear-gradient(160deg,#6fb07e,#2d5a43)','linear-gradient(135deg,#1c4331,#0c261e)'];
+const igFlag='<svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.6"><path d="M7 21V4"/><path d="M7 4l11 3-11 3" fill="#ffffff" stroke="none"/><path d="M7 4l11 3-11 3"/></svg>';
+const igMark='<svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.1 0 4.1.06 1 .05 1.7.2 2.3.44.6.24 1.1.56 1.6 1.06.5.5.82 1 1.06 1.6.24.6.39 1.3.44 2.3.05 1 .06 1.4.06 4.1s0 3.1-.06 4.1c-.05 1-.2 1.7-.44 2.3a4.3 4.3 0 01-1.06 1.6c-.5.5-1 .82-1.6 1.06-.6.24-1.3.39-2.3.44-1 .05-1.4.06-4.1.06s-3.1 0-4.1-.06c-1-.05-1.7-.2-2.3-.44a4.3 4.3 0 01-1.6-1.06 4.3 4.3 0 01-1.06-1.6c-.24-.6-.39-1.3-.44-2.3C2 15.1 2 14.7 2 12s0-3.1.06-4.1c.05-1 .2-1.7.44-2.3A4.3 4.3 0 013.56 4c.5-.5 1-.82 1.6-1.06.6-.24 1.3-.39 2.3-.44C8.9 2 9.3 2 12 2zm0 1.8c-2.65 0-2.97 0-4 .06-.77.03-1.19.16-1.47.27-.37.14-.63.31-.91.59-.28.28-.45.54-.59.91-.11.28-.24.7-.27 1.47-.05 1.03-.06 1.35-.06 4s0 2.97.06 4c.03.77.16 1.19.27 1.47.14.37.31.63.59.91.28.28.54.45.91.59.28.11.7.24 1.47.27 1.03.05 1.35.06 4 .06s2.97 0 4-.06c.77-.03 1.19-.16 1.47-.27.37-.14.63-.31.91-.59.28-.28.45-.54.59-.91.11-.28.24-.7.27-1.47.05-1.03.06-1.35.06-4s0-2.97-.06-4c-.03-.77-.16-1.19-.27-1.47a2.5 2.5 0 00-.59-.91 2.5 2.5 0 00-.91-.59c-.28-.11-.7-.24-1.47-.27-1.03-.05-1.35-.06-4-.06zm0 3.06a5.14 5.14 0 110 10.28 5.14 5.14 0 010-10.28zm0 1.8a3.34 3.34 0 100 6.68 3.34 3.34 0 000-6.68zm5.34-3.15a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>';
+const igHeart='<svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.6-9C1 9 2.4 5.5 6 5.5c2 0 3.2 1.2 4 2.3.8-1.1 2-2.3 4-2.3 3.6 0 5 3.5 3.6 6.5C19.5 16.1 12 21 12 21z"/></svg>';
+function igTile(p,i){
+  const inner=(p.img&&p.img.trim()!=="")
+    ? '<img src="'+p.img+'" alt="'+(p.cap||'Instagram')+'">'
+    : '<div class="ig-ph" style="background:'+igGrads[i%igGrads.length]+'">'+igFlag+'<div class="cap">'+String(p.cap||'').replace(/\n/g,'<br>')+'</div></div>';
+  const chip=p.chip?'<span class="ig-chip">'+p.chip+'</span>':'';
+  return '<a class="ig-tile" href="'+p.link+'" target="_blank" rel="noopener">'+chip+'<span class="igmark">'+igMark+'</span>'+inner+'<span class="ov"><span>'+igHeart+' 見る</span></span></a>';
+}
+var igGrid=document.getElementById('ig-grid');
+if(igGrid) igGrid.innerHTML=igPosts.map(igTile).join('');
+</script>
+</body>
+</html>
