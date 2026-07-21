@@ -140,7 +140,7 @@ section.block{padding:6rem 0;position:relative}
 .tbl-scroll{overflow-x:auto}
 
 /* ---------- course rate ---------- */
-.rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.rate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
 .rate-card{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--brass);border-radius:3px;padding:2rem 1.6rem;text-align:center;transition:.25s}
 .rate-card:hover{transform:translateY(-4px);box-shadow:0 18px 46px rgba(18,53,42,.14)}
 .rate-card .tee{font-size:.78rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:.4rem}
@@ -327,7 +327,7 @@ section[id]{scroll-margin-top:88px}
   .menu{display:none}
   .burger{display:flex}
   .course-lead,.price-grid,.access-grid{grid-template-columns:1fr}
-  .rate-grid,.fac-grid{grid-template-columns:1fr 1fr}
+  .fac-grid{grid-template-columns:1fr 1fr}
   .weather{grid-template-columns:1fr}
   .wx-now{border-right:0;border-bottom:1px solid rgba(255,255,255,.14);padding:0 0 1.5rem}
   .foot-top{grid-template-columns:1fr}
@@ -336,7 +336,8 @@ section[id]{scroll-margin-top:88px}
   .news-item .ttl{grid-column:1/-1}
 }
 @media(max-width:560px){
-  .rate-grid,.fac-grid,.gal-grid{grid-template-columns:1fr 1fr}
+  .fac-grid,.gal-grid{grid-template-columns:1fr 1fr}
+  .rate-grid{grid-template-columns:1fr}
   .wx-forecast{grid-template-columns:repeat(5,1fr);gap:.4rem}
   .gal-item.big{grid-column:span 2;grid-row:span 1}
   .hero-meta .wrap{gap:1.2rem}
@@ -536,7 +537,7 @@ section[id]{scroll-margin-top:88px}
       <span class="kicker">Course Rating</span>
       <h2>コースレート</h2>
     </div>
-    <div class="rate-grid reveal" style="grid-template-columns:repeat(2,1fr);max-width:720px;margin:0 auto">
+    <div class="rate-grid reveal" style="max-width:720px;margin:0 auto">
       <div class="rate-card">
         <div class="tee">Regular Tee ／ R.T</div>
         <div class="yard">5,298<small> y</small></div>
